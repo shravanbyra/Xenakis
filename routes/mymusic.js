@@ -55,4 +55,22 @@ router.get('/createnewdocument', function(req, res, next) {
 	});
 });
 
+router.get('/inthehallofthemountainking', function(req, res, next) {
+	res.render('inthehallofthemountainking', {
+		title: 'In the Hall of the Mountain King',
+	});
+});
+
+router.get('/moonlightsonata', function(req, res, next) {
+	res.render('moonlightsonata', {
+		title: 'Moonlight Sonata',
+	});
+});
+
+router.get('/longlongtimeago', function(req, res, next) {
+	res.render('longlongtimeago', {
+		title: 'Long, Long Time Ago / The Funeral',
+	});
+});
+
 module.exports = router;

@@ -2,16 +2,25 @@
 	ul.editor-tools
 		li
 			.header-button
-				p SAVE
+				p#save SAVE
+		li
+			.divider
 		li
 			.header-button
-				p SETTINGS
-		// .divider
-		// li(class="header-button", id="note-button"): img(src="/images/quarter-note-up.svg")
-		// li(class="header-button", id="rest-button"): img(src="/images/Soupir_(silence).svg")
+				#note-button
+				// img(src="/images/quarter-note-up.svg", id='note-button')
+		li
+			.header-button
+				#rest-button
+				// img(src="/images/Soupir_(silence).svg", id='rest-button')
 		li
 			.header-button
 				p#delete-button X
 		li
 			.header-button
 				p#add-staff +
+		li
+			.divider
+		li
+			.header-button
+				p#help Help

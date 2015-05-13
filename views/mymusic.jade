@@ -7,10 +7,10 @@ block content
             h1 DOCUMENT INFORMATION
         .subtitlewrapper
             h2 TITLE:
-            p#title In the Hall of the Mountain King
+            p#title No document currently selected
         .subtitlewrapper
             h2 INSTRUMENTS:
-            p#instrument Piano, Violin, Viola, Cello
+            p#instrument -
         .buttondiv
             a(href='', id='opendoc'): .openbutton(id="opendocumentbutton")
                 p OPEN
@@ -19,11 +19,11 @@ block content
         .previewdiv
             h2 PREVIEW:
             .previewimgwrapper
-                img(src='/images/In the Hall of the Mountain King.png', id='previewimage')
+                img(src='', id='previewimage')
             .previewpagenumbers
                 p
                     strong(class="fa fa-angle-left" id="leftarrow")
-                    strong 1/7
+                    strong#number-of-pages -/-
                     strong(class="fa fa-angle-right" id="rightarrow")
     .mymusic
         h1 #{title}

@@ -1,6 +1,36 @@
 var selectedElement = null;
 
-$("li#note-button").on("click", function() {
+$('#save').click(function() {
+	$('.saved-popup').fadeIn(100);
+	$('.saved-popup').css('display', 'block');
+	$('.darken').fadeIn(100);
+	$('.darken').css('display', 'block');
+
+	setTimeout(function() {
+		$('.saved-popup').fadeOut(500);
+		$('.darken').fadeOut(500);
+		setTimeout(function() {
+			$('.saved-popup').css('display', 'none');
+			$('.darken').css('display', 'none');
+		}, 500);
+	}, 1500);
+});
+
+$('#help').click(function() {
+	$('.help-box').fadeIn(100);
+	$('.help-box').css('display', 'block');
+	$('.darken-help').fadeIn(100);
+	$('.darken-help').css('display', 'block');
+});
+
+$('#close-x').click(function() {
+	$('.help-box').fadeOut(100);
+	$('.help-box').css('display', 'none');
+	$('.darken-help').fadeOut(100);
+	$('.darken-help').css('display', 'none');
+});
+
+$("#note-button").on("click", function() {
 	if (selectedElement) {
 		selectedElement.css("background-image", "url('/images/quarter-note-down.svg')");
 		selectedElement.css("margin-top", "45px");
@@ -8,7 +38,7 @@ $("li#note-button").on("click", function() {
 	}
 });
 
-$("li#rest-button").on("click", function() {
+$("#rest-button").on("click", function() {
 	if (selectedElement) {
 		selectedElement.css("background-image", "url('/images/Soupir_(silence).svg')");
 		selectedElement.css("margin-top", "28px");
@@ -20,7 +50,7 @@ $("li#rest-button").on("click", function() {
  * When a user clicks the delete button, the currently selected note is deleted
  * and all other notes are adjusted to fit the staves accordingly.
  */
-$("li#delete-button").on("click", function() {
+$("#delete-button").on("click", function() {
 	if (selectedElement) {
 
 		if (selectedElement.is('#first-note')) {
@@ -47,7 +77,7 @@ $("li#delete-button").on("click", function() {
 	}
 });
 
-$("li#add-staff").click(function() {
+$("#add-staff").click(function() {
 	$('.sheet_music').css('height', '+=150');
 	$('.staves').append('<div class="staff-added"></div>');
 	$('.notes').append('<div class="note-added first-note-of-staff"></div><div class="note-added"></div><div class="note-added"></div><div class="note-added"></div><div class="note-added"></div><div class="note-added"></div><div class="note-added"></div><div class="note-added"></div><div class="note-added"></div><div class="note-added"></div><div class="note-added"></div><div class="note-added"></div><div class="note-added"></div><div class="note-added"></div><div class="note-added"></div><div class="note-added"></div>');

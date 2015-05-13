@@ -12,4 +12,8 @@ For MP1, you should edit the following:
 - `public/index.html` - all files in the `public` folder will be served by the server
 - `sass` folder - all sass files here will be compiled to `public/css/styles.css`
 - `js` folder - all javascript files here will be uglified and put in `public/js/script.js`
-# Xenakis
+
+To run Xenakis locally:
+
+1. Install node.js if it is not already installed on your machine. Download the appropriate source code from https://nodejs.org/download/
+2.

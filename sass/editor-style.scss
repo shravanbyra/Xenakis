@@ -176,29 +176,25 @@
 	border-bottom: thin solid #aaaaba;
 
 	ul.editor-tools {
-
-	}
-
-	/*ul {
 		width: 100%;
 		height: 100%;
 		background-color: #fafafa;
 
-		// overflow: hidden;
+		overflow: hidden;
 
 		li {
 			.header-button {
 			    width: 120px;
-			    height: 100%;
+			    height: 50px;
 
 				font-family: 'Lato', sans-serif;
 			    font-size: 20px;
 				font-weight: 300;
 			    color: black;
-			    text-align: center;
+				text-align: center;
+
 				display: inline-block;
-				//margin: 0;
-				//padding: 0;
+				float: left;
 			}
 
 			.header-button:hover
@@ -214,19 +210,147 @@
 
 				background-color: #aaaaba;
 
-				//margin: 0;
-				//display: inline-block;
+				margin: 5px 15px 0 15px;
+				padding: 0 0 0 0;
+				display: inline-block;
+				float: left;
+			}
+
+			p {
+				padding: 13px 0 0 0;
 			}
 
 			#add-staff {
 				font-size: 42px;
 				color: blue;
+				padding: 4px 0 0 0;
 			}
 
 			#delete-button {
-				font-size: 36px;
+				font-size: 32px;
 				color: red;
+				padding: 9px 0 0 0;
+			}
+
+			#note-button {
+				width: 100%;
+				height: 80%;
+
+				background-image: url('/images/quarter-note-up.svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center center;
+
+				margin: 5px 0 0 0;
+			}
+
+			#rest-button {
+				width: 100%;
+				height: 80%;
+
+				background-image: url('/images/Soupir_(silence).svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center center;
+
+				margin: 5px 0 0 0;
 			}
 		}
-	}*/
+	}
+}
+
+.darken,
+.darken-help {
+	width: 100%;
+	height: 100%;
+	z-index: 499;
+
+	display: none;
+	position: fixed;
+
+	top: 0;
+	left: 0;
+
+	background-color: black;
+	opacity: 0.3;
+}
+
+.saved-popup {
+	width: 300px;
+	height: 100px;
+	z-index: 1000;
+
+	background-color: #fafafa;
+	border: thin solid #aaaaba;
+
+	display: none;
+	position: fixed;
+	top: 35%;
+	left: 0;
+	right: 0;
+
+	margin: 0 auto;
+
+	p {
+		font-family: Arial, Helvetica, sans-serif;
+
+		text-align: center;
+		padding: 45px 0 0 0;
+	}
+}
+
+.help-box {
+	width: 400px;
+	height: 330px;
+	z-index: 800;
+
+	background-color: #fafafa;
+
+	display: none;
+	position: fixed;
+	top: 150px;
+	left: 0;
+	right: 0;
+
+	margin: 0 auto;
+
+	p#close-x {
+		display: inline-block;
+		position: relative;
+		margin-top: -10px;
+	}
+
+	p#close-x:hover {
+		cursor: pointer;
+	}
+
+	h1 {
+		font-family: 'Lato', sans-serif;
+		font-size: 25px;
+
+		margin: 0 75px 0 115px;
+		padding: 15px 5px 40px 5px;
+		font-align: center;
+		display: inline-block;
+	}
+
+	p {
+		font-family: Helvetica, sans-serif;
+		font-size: 14px;
+
+		color: black;
+		padding: 0 20px 10px 20px;
+
+		#red-x {
+			font-family: 'Lato', sans-serif;
+			font-size: 14px;
+			color: red;
+		}
+
+		#blue-plus {
+			font-family: 'Lato', sans-serif;
+			font-size: 18px;
+			color: blue;
+		}
+	}
 }
