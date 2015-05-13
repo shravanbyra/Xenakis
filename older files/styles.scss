@@ -1,0 +1,230 @@
+@import "compass";
+@import "compass/reset";
+
+@import "_variables";
+@import "mixins";
+@import "base";
+
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans);
+
+body {
+  background-color: #808A99;
+}
+
+.headerdiv {
+  width: 100%;
+  height: 60px;
+  background-color: $mydocscolor;
+  display: inline-block;
+  position: fixed;
+  vertical-align: middle;
+  .headerlogodiv {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 80%;
+    display: inline-block;
+    vertical-align: middle;
+    img {
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+  .profilediv{
+    font-family: $font-profile;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 60%;
+    height: 80%;
+    float: right;
+    vertical-align: middle;
+    img {
+      float: right;
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+}
+
+div.social-wrap button {
+  padding-right: 45px;
+  height: 35px;
+  background: none;
+  border: none;
+  display: block;
+  background-size: 35px 35px;
+  background-position: right center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  color: white;
+  font-family: $font-profile;
+  font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 50%;
+  border-bottom: 2px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  box-shadow: 0 4px 2px -2px black;
+  text-shadow: rgba(0, 0, 0, .5) -1px -1px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+button#facebook {
+  border-color: #2d5073;
+  background-color: #3b5998;
+  background-image: url(http://icons.iconarchive.com/icons/danleech/simple/512/facebook-icon.png);
+}
+div.social-wrap button:active {
+  background-color: #222;
+}
+.social-wrap{
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+html, body {
+  margin:0; padding:0; height:100%; width:100%;
+}
+
+.backgrounddiv {
+  height:100%;
+  width:100%;
+  overflow:hidden;
+  background-image: url("/images/BackgroundImage.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 30px;
+}
+
+.pagecontentdiv {
+  margin: auto;
+  width: 50%;
+  height: 75%;
+  text-align: center;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  color: $whiteishfontcolor;
+  h2 {
+    font-family: $font-cursive-slogan;
+    font-size: 30px;
+    padding-top: 2%;
+  }
+  p {
+    padding-bottom: 1%;
+    font-family: $font-cursive-slogan;
+    font-size: 20px;
+    a {
+      font-size: 16px;
+      font-family: $font-profile;
+      color: $hyperlinkblue;
+    }
+  }
+}
+
+.logodiv {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5px;
+}
+
+.mymusic {
+  h1 {
+    font-family: $font-mydocs;
+    font-size: 40px;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    color: $whiteishfontcolor;
+  }
+}
+
+li {
+  .newdoc {
+    text-align: center;
+    font-family: $font-mydocs;
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: $mydocscolor;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    .wrapperdiv {
+      background-color: $headerfontcolor;
+      height: 80%;
+      vertical-align: middle;
+      a{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $whiteishfontcolor;
+      }
+    }
+  }
+
+  div {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: $mydocscolor;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: $font-mydocs;
+    .wrapperdiv {
+      background-color: $headerfontcolor;
+      height: 80%;
+      width: 100%;
+      vertical-align: middle;
+      img{
+        padding-top: 5px;
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+    .textwrapperdiv {
+      height: 20%;
+      width: 100%;
+      text-align: center;
+      a {
+        color: $whiteishfontcolor;
+      }
+      a:hover {
+        text-decoration: none;
+        color: $hyperlinkblue;
+      }
+    }
+  }
+}
+
+.create-doc-options {
+    h1 {
+        text-align: center;
+        font-family: $font-mydocs
+    }
+    background-color: $whiteishfontcolor;
+    width: 600px;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    font-family: $font-mydocs;
+    text-decoration: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding:10px;
+
+    .long-input {
+        width: 550px;
+        height: 15px;
+    }
+}

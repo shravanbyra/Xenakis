@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html leng="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  </head>
+  <body>
+    <div id="header">
+      <h1><a href="/">Xenakis</a></h1>
+    </div>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="../public/js/createnew.js"></script>
+    <p>Here the user specifies their settings for creating new documents.</p>
+    <div class="container">
+      <div class="create-view">
+        <h1>Create New Document
+          <form class="create-doc-options">
+            <label for="title">Title of Piece: <br><input type="text" name="title"></br>
+              <label for="composer">Name of Composer: <br><input type="text" name="composer"></br>
+                <Initial>Piece Settings:
+                  <table class="create-doc-options">
+                    <tr width="400px" class="create-doc-options">
+                      <td width="300px" class="create-doc-options">
+                        <label for="notes-per-minute">Notes Per Measure: </label> <input type="text" name="notes-per-minute">
+                          <td width="100px" class="create-doc-options">
+                            <label for="key">Key:
+                              <select name="key">
+                                <option value="A">A
+                                  <option value="B">B</option>
+                                  <option value="C">C</option>
+                                  <option value="D">D</option>
+                                  <option value="E">E</option>
+                                  <option value="F">F</option>
+                                  <option value="G">G</option>
+                                  <option value="H">H</option>
+                                  <option value="I">I</option>
+                                  <option value="J">J</option>
+                                  <option value="K">K</option>
+                                  <option value="L">L</option>
+                                  <option value="M">M</option>
+                                  <option value="N">N</option>
+                                  <option value="O">O</option>
+                                  <option value="P">P</option>
+                                  <option value="Q">Q</option>
+                                  <option value="R">R</option>
+                                  <option value="S">S</option>
+                                  <option value="T">T</option>
+                                  <option value="U">U</option>
+                                  <option value="V">V</option>
+                                  <option value="W">W</option>
+                                  <option value="X">X</option>
+                                  <option value="Y">Y</option>
+                                  <option value="Z">Z</option>
+                                </option>
+                              </select>
+                            </label>
+                          </td>
+                        </label>
+                      </td>
+                      <tr class="create-doc-options">
+                        <td class="create-doc-options">
+                          <label for="note-value">Note Value: </label> <input type="text" name="note-value"></label>
+                        </td>
+                      </tr>
+                    </tr>
+                  </table>
+                  <label for="instruments">Composing for Instruments:</label><br><input name="instruments" id="instruments"></br>
+                  <button type="submit" value="Create"><a href="/profile/mymusic/document1">Create</a></button>
+                  <button type="button" value="Cancel"><a href="/profile/mymusic">Cancel</a></button>
+                </Initial>
+              </label>
+            </label>
+          </form>
+        </h1>
+      </div>
+    </div>
+    <script src="lib/jquery-2.1.3.min/index.js"></script>
+    <script src="js/script.js"></script>
+    <scripte src="http://localhost:35729/livereload.js"></scripte>
+  </body>
+</html>

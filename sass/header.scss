@@ -1,0 +1,30 @@
+.headerdiv {
+  width: 100%;
+  height: 60px;
+  background-color: #002966;
+  display: inline-block;
+  vertical-align: middle;
+  position: fixed;
+  z-index: 100;
+  .headerlogodiv {
+    padding-top: 10px;
+    padding-left: 8px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    img {
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+  .profilediv{
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 16px;
+    color: white;
+    height: 60px;
+    padding-top: 22px;
+    padding-right: 5px;
+    float: right;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,38 @@
+extends layout
+
+block content
+	include header.jade
+	include editor-header.jade
+
+	.container
+		.document-editor
+			.sheet_music.
+				<h2 class="document-title">Document 1</h2>
+				<h3 class="document-composer">Jane Doe</h3>
+				<h3 class="instrument">Violin</h3>
+				<div class="vex-tabdiv" width=800 scale=1.0 editor="false">
+					tabstave notation=true tablature=false clef=treble key=F time=4/4
+					notes C/5
+					notes D/5
+					notes A/5
+					notes B/5
+					notes |
+					notes ##
+					notes A/4
+					notes C/4
+					notes ##
+					tabstave notation=true tablature=false key=F
+					notes B/4 D-A-B/5 | ## A-C/4 ##
+					tabstave notation=true tablature=false key=F
+					notes C-D-A-B/5 | ## A-C/4 ##
+					tabstave notation=true tablature=false key=F
+					notes C-D-A-B/5 | ## A-C/4 ##
+					tabstave notation=true tablature=false key=F
+					notes C-D-A-B/5 | ## A-C/4 ##
+					tabstave notation=true tablature=false key=F
+					notes C-D-A-B/5 | ## A-C/4 ##
+					tabstave notation=true tablature=false key=F
+					notes C-D-A-B/5 | ## A-C/4 ##
+					tabstave notation=true tablature=false key=F
+					notes C-D-A-B/5 | ## A-C/4 ##
+				</div>

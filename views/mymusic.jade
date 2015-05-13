@@ -1,0 +1,95 @@
+extends layout
+
+block content
+    include header.jade
+    aside(id="selecteddocument")
+        .titlewrapper
+            h1 DOCUMENT INFORMATION
+        .subtitlewrapper
+            h2 TITLE:
+            p#title In the Hall of the Mountain King
+        .subtitlewrapper
+            h2 INSTRUMENTS:
+            p#instrument Piano, Violin, Viola, Cello
+        .buttondiv
+            a(href='', id='opendoc'): .openbutton(id="opendocumentbutton")
+                p OPEN
+            .deletebutton(id="deletedocumentbutton")
+                p DELETE
+        .previewdiv
+            h2 PREVIEW:
+            .previewimgwrapper
+                img(src='/images/In the Hall of the Mountain King.png', id='previewimage')
+            .previewpagenumbers
+                p
+                    strong(class="fa fa-angle-left" id="leftarrow")
+                    strong 1/7
+                    strong(class="fa fa-angle-right" id="rightarrow")
+    .mymusic
+        h1 #{title}
+        ul(class="mymusiclist")
+            li#newdoc: a(href="#openModal")
+                .newdoc
+                    .wrapperdiv
+                        p +
+                    .textwrapperdiv
+                        a(href="#openModal") Add New Music
+            li#doc1
+                .document1
+                    .wrapperdiv
+                        img(src='/images/In the Hall of the Mountain King.png')
+                    .textwrapperdiv
+                        a In the Hall of the Mountain King
+            li#doc2
+                .document2
+                    .wrapperdiv
+                        img(src='/images/Moonlight Sonata.png')
+                    .textwrapperdiv
+                        a Moonlight Sonata
+            li#doc3
+                .document3
+                    .wrapperdiv
+                        img(src='/images/Long, Long Time Ago.png')
+                    .textwrapperdiv
+                        a A Long, Long Time Ago
+
+    .modalDialog(id="openModal")
+        .create-view
+            form(class="create-doc-options", action="/profile/mymusic/newdocument")
+                h1 CREATE NEW DOCUMENT
+                label(for="title") Title of Piece: <br><input class="long-input" type="text" name="title">
+                label(for="composer") <br>Name of Composer: <br><input class="long-input" type="text" name="composer">
+                h2(id="bullshit") INITIAL PIECE SETTINGS:
+                table(class="create-doc-options")
+                    tr(class="create-doc-options")
+                        td(class="create-doc-options")
+                            label(for="notes-per-minute", class="short-label") Notes Per Measure:
+                            input(class="short-input", type="text", name="notes-per-minute")
+                        td(class="create-doc-options")
+                            label(for="key") Key:
+                                select(name="note")
+                                    option(value="A") A
+                                    option(value="B") B
+                                    option(value="C") C
+                                    option(value="D") D
+                                    option(value="E") E
+                                    option(value="F") F
+                                    option(value="G") G
+                                select(name="sign")
+                                    option(value="nat") Natural
+                                    option(value="sharp") Sharp
+                                    option(value="flat") Flat
+                                select(name="majority")
+                                    option(value="major") Major
+                                    option(value="minor") Minor
+                    tr(class="create-doc-options")
+                        td(class="create-doc-options")
+                            label(for="note-value", class="short-label") Note Value:
+                            input(class="short-input", type="text", name="note-value")
+                label(for="instruments") Composing for Instruments:
+                input(class="long-input", name="instruments", type="text", id="instruments")
+                br
+                a(href="/profile/mymusic/newdocument")
+                    input(type="button", class="submit-button", value="CREATE")
+                a(href="#close")
+                    input(type="button", class="cancel-button", value="CANCEL")

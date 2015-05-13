@@ -1,0 +1,54 @@
+extends layout
+
+block content
+    include header.jade
+    aside(id="selecteddocument")
+        .titlewrapper
+            h1 DOCUMENT INFORMATION
+        .subtitlewrapper
+            h2 TITLE:
+            p#title In the Hall of the Mountain King
+        .subtitlewrapper
+            h2 INSTRUMENTS:
+            p#instrument Piano, Violin, Viola, Cello
+        .buttondiv
+            a(href='', id='opendoc'): .openbutton(id="opendocumentbutton")
+                p OPEN
+            .deletebutton(id="deletedocumentbutton")
+                p DELETE
+        .previewdiv
+            h2 PREVIEW:
+            .previewimgwrapper
+                img(src='/images/In the Hall of the Mountain King.png', id='previewimage')
+            .previewpagenumbers
+                p
+                    strong(class="fa fa-angle-left" id="leftarrow")
+                    strong 1/7
+                    strong(class="fa fa-angle-right" id="rightarrow")
+    .mymusic
+        h1 #{title}
+        ul.mymusiclist
+            li#newdoc: a(href='/profile/mymusic/newdocument')
+                .newdoc
+                    .wrapperdiv
+                        p +
+                    .textwrapperdiv
+                        a Add New Music
+            li#doc1
+                .document1
+                    .wrapperdiv
+                        img(src='/images/In the Hall of the Mountain King.png')
+                    .textwrapperdiv
+                        a In the Hall of the Mountain King
+            li#doc2
+                .document2
+                    .wrapperdiv
+                        img(src='/images/Moonlight Sonata.png')
+                    .textwrapperdiv
+                        a Moonlight Sonata
+            li#doc3
+                .document3
+                    .wrapperdiv
+                        img(src='/images/Long, Long Time Ago.png')
+                    .textwrapperdiv
+                        a A Long, Long Time Ago

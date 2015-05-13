@@ -1,0 +1,50 @@
+extends layout
+
+block content
+    include header.jade
+    script(src="//code.jquery.com/jquery-1.10.2.js")
+    script(src="//code.jquery.com/ui/1.11.4/jquery-ui.js")
+
+    .container
+        .create-view
+            form(class="create-doc-options" action="/profile/mymusic/newdocument" method="post")
+                h1 Create New Document
+                label(for="title") Title of Piece: <br>
+                    input(type="text", name="title")
+                </br>
+                label(for="composer") Name of Composer: <br>
+                    input(type="text", name="composer")
+                </br>
+                p Initial Piece Settings:
+                    table(class="create-doc-options")
+                        tr(class="create-doc-options", width="400px")
+                            td(class="create-doc-options", width="300px")
+                                label(for="beats-per-minute") Notes Per Measure:
+                                    input(type="text", name="beatsPerMinute")
+                        tr(class="create-doc-options")
+                            td(class="create-doc-options")
+                                label(for="note-value") Note Value:
+                                    input(type="text" name="noteValue")
+                        tr(class="create-doc-options")
+                            td(class="create-doc-options", width="100px")
+                                label(for="key") Key Signature:
+                                    select(name="note")
+                                        option(value="A") A
+                                        option(value="B") B
+                                        option(value="C") C
+                                        option(value="D") D
+                                        option(value="E") E
+                                        option(value="F") F
+                                        option(value="G") G
+                                    select(name="sign")
+                                        option(value="nat") Natural
+                                        option(value="sharp") Sharp
+                                        option(value="flat") Flat
+                                    select(name="majority")
+                                        option(value="major") Major
+                                        option(value="minor") Minor
+
+                    label(for="instruments") Composing for Instruments:
+                    <br><input name="instruments" id="instruments"></br>
+                    button(type="submit", value="Create"): a(href="/profile/mymusic/newdocument") Create
+                    button(type="button", value="Cancel"): a(href="/profile/mymusic") Cancel

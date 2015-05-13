@@ -1,0 +1,40 @@
+extends layout
+
+block content
+
+
+    .sheet-music-setting-view
+        form(class="sheet-music-setting", action="")
+            h2 Select New Key
+
+            select(name='note')
+                option(value='A') A
+
+                option(value='B') B
+
+                option(value='C') C
+
+                option(value='D') D
+
+                option(value='E') E
+
+                option(value='F') F
+
+                option(value='G') G
+
+            h3 Change for
+
+            table
+                tr.sheet-music-setting-option(width='200px')
+                    td
+                        input(type='radio', name='time-signature-scope', value='only', class='short-input')
+                    td
+                        label(for='time-signature-only') This measure only
+
+                tr.sheet-music-setting-option(width='200px')
+                    td
+                        input(type='radio', name='time-signature-scope', value='onwards', class='short-input')
+                    td
+                        label(for='time-signature-onwards') This measure onwards
+            button(type="submit", class="submit-button", value="Confirm"): p Confirm
+            input(type="button", class="cancel-button", onClick="location.href=''", value="Cancel")

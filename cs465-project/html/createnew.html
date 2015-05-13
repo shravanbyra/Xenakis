@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Xenakis</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="../js/createnew.js"></script>
+    </head>
+
+    <body>
+        <p>Here the user specifies their settings for creating new documents.</p>
+
+        <div class="container">
+            <div class="create-view">
+                <h1>Create New Document</h1>
+                <form class="create-doc-options">
+                    <label for="title">Title of Piece:</label> <br><input type="text" name="title"></br>
+                    <label for="composer">Name of Composer:</label> <br><input type="text" name="composer"></br>
+                    Initial Piece Settings:
+                    <table class="create-doc-options">
+                        <tr class="create-doc-options" width="400px">
+                            <td class="create-doc-options" width="300px">
+                                <label for="notes-per-minute">Notes Per Measure:</label> <input type="text" name="notes-per-minute">
+                            </td>
+                            <td class="create-doc-options" width="100px">
+                                <label for="key">Key:</label>
+                                <select name="note">
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="E">E</option>
+                                    <option value="F">F</option>
+                                    <option value="G">G</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr class="create-doc-options">
+                            <td class="create-doc-options">
+                                <label for="note-value">Note Value:</label> <input type="text" name="note-value">
+                            </td>
+                        </tr>
+                    </table>
+                    <label for="instruments">Composing for Instruments:</label> 
+                    <br><input name="instruments" id="instruments"></br>
+                    <button type="submit" value="Create"><a href="document1.html">Create</a></button>
+                    <button type="button" value="Cancel"><a href="profile.html">Cancel</a></button>
+                </form>
+            </div>
+        </div>
+
+        <script src="lib/jquery-2.1.3.min/index.js"></script>
+        <script src="js/script.js"></script>
+        <script src="http://localhost:35729/livereload.js"></script>
+    </body>
+</html>

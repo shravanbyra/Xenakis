@@ -1,0 +1,42 @@
+extends layout
+
+
+
+block content
+    .sheet-music-setting-view
+        form.sheet-music-setting
+            h2 Set Time Signature
+
+            table.sheet-music-setting
+                tr.sheet-music-setting-option(width='200px')
+                    td(width='70px')
+                        input(type='text', class='short-input', name='beats-per-measure', width='10px')
+
+                    td
+                        label(for='beats-per-measure') Beats per measure
+
+                tr.sheet-music-setting-option(width='200px')
+                    td
+                        input(type='text', class='short-input', name='duration-of-note', width='10px')
+
+                    td
+                        label(for='duration-of-note') Duration of note
+
+            h3 Change for
+
+            table
+                tr.sheet-music-setting-option(width='200px')
+                    td(width='70px')
+                        input(type='radio', name='time-signature-scope', value='only', class='short-input')
+
+                    td
+                        label(for='time-signature-only') This measure only
+
+                tr.sheet-music-setting-option(width='200px')
+                    td
+                        input(type='radio', name='time-signature-scope', value='onwards', class='short-input')
+
+                    td
+                        label(for='time-signature-onwards') This measure onwards
+            button(type="submit", class="submit-button", value="Confirm"): p Confirm
+            input(type="button", class="cancel-button", onClick="location.href=''", value="Cancel")
